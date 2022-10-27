@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/linearFlow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:constraint_referenced_ids="timeTableFlow, totalTimeTextView, startButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/timeTableFlow"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:constraint_referenced_ids="countDownTextView, countDownTimeTextView, workoutTextView, workoutTimeTextView, restTextView, restTimeTextView, roundTextView, roundCountTextView"
+        app:flow_maxElementsWrap="2"
+        app:flow_wrapMode="chain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/countDownTextView"
+        style="@style/title"
+        android:background="@color/red"
+        android:text="카운트다운"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/countDownTimeTextView"
+        style="@style/time"
+        android:background="@color/red"
+        android:text="00:00"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/workoutTextView"
+        style="@style/title"
+        android:background="@color/yellow"
+        android:text="운동"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/workoutTimeTextView"
+        style="@style/time"
+        android:background="@color/yellow"
+        android:text="00:00"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/restTextView"
+        style="@style/title"
+        android:background="@color/green"
+        android:text="휴식"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/restTimeTextView"
+        style="@style/time"
+        android:background="@color/green"
+        android:text="00:00"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/roundTextView"
+        style="@style/title"
+        android:background="@color/blue"
+        android:text="라운드"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/roundCountTextView"
+        style="@style/time"
+        android:background="@color/blue"
+        android:text="4"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/totalTimeTextView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:gravity="center"
+        android:text="총 시간\n00:00"
+        android:textSize="30sp"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/startButton"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#1DE9B6"
+        android:clickable="true"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:gravity="center"
+        android:padding="20dp"
+        android:text="시작"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/countDownLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="countDownTextView,countDownTimeTextView"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/workoutLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="workoutTextView,workoutTimeTextView"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/restLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="restTextView,restTimeTextView"
+        tools:ignore="MissingConstraints" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/roundLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="roundTextView,roundCountTextView"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
