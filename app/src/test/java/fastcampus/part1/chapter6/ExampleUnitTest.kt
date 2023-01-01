@@ -1,4 +1,4 @@
-package fastcampus.part1.chpater6
+package fastcampus.part1.chapter6
 
 import org.junit.Test
 

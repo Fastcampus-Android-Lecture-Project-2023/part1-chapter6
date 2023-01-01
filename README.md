@@ -56,3 +56,9 @@
 - [View.post(Runnable)](https://developer.android.com/reference/android/view/View?hl=ko#post(java.lang.Runnable))
 - [View.postDelayed(Runnable, long)](https://developer.android.com/reference/android/view/View?hl=ko#postDelayed(java.lang.Runnable,%20long))
 - [Handler](https://developer.android.com/reference/android/os/Handler)
+
+
+# Chapter 2. 한 걸음 더
+
+1. Handler 를 통해서, UI 스레드 작업 해보세요
+2. Handler 를 통해서 메시지를 전송 해보세요
